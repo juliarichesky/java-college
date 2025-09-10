@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ea7a015-2c44-4d37-aaad-05a0dd8aa567" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/codigo-java/entities/Conteudo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codigo-java/entities/Filme.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codigo-java/entities/Serie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codigo-java/services/JogoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigo-java/Jogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/codigo-java/entities/Jogo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigo-java/index.java" beforeDir="false" afterPath="$PROJECT_DIR$/codigo-java/index.java" afterDir="false" />
-    </list>
+    <list default="true" id="5ea7a015-2c44-4d37-aaad-05a0dd8aa567" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +61,16 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Julia\Documents\MeusProjetos\java-college\1-semestre\aula-02\projeto-jogos\codigo-java\entities" />
+      <recent name="C:\Users\Julia\Documents\MeusProjetos\java-college\1-semestre\aula-02\projeto-jogos\codigo-java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Julia\Documents\MeusProjetos\java-college\1-semestre\aula-02\projeto-jogos\codigo-java\entities" />
+      <recent name="C:\Users\Julia\Documents\MeusProjetos\java-college\1-semestre\aula-02\projeto-jogos\codigo-java\services" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -85,7 +88,7 @@
       <updated>1756990623260</updated>
       <workItem from="1756990624774" duration="7000" />
       <workItem from="1756990637503" duration="322000" />
-      <workItem from="1757473172286" duration="312000" />
+      <workItem from="1757473172286" duration="345000" />
     </task>
     <servers />
   </component>
