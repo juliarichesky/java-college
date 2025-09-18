@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ea7a015-2c44-4d37-aaad-05a0dd8aa567" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/codigo-java/entities/Avaliacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aula-02-03-04/descricao.txt.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aula-02-03-04/projeto-jogos/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aula-02-03-04/projeto-jogos/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aula-02-03-04/projeto-jogos/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aula-02-03-04/projeto-jogos/codigo-java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aula-02-03-04/projeto-jogos/codigo-java/entities/Conteudo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aula-02-03-04/projeto-jogos/codigo-java/entities/Filme.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aula-02-03-04/projeto-jogos/codigo-java/entities/Jogo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aula-02-03-04/projeto-jogos/codigo-java/entities/Serie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aula-02-03-04/projeto-jogos/codigo-java/services/JogoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aula-02-03-04/projeto-jogos/codigo-java/services/SerieService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aula-02-03-04/projeto-jogos/codigo-java/utils/IOUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../aula-02-03-04/projeto-jogos/codigo-java/utils/StringUtils.java" beforeDir="false" />
-    </list>
+    <list default="true" id="5ea7a015-2c44-4d37-aaad-05a0dd8aa567" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,7 +93,7 @@
       <workItem from="1756990637503" duration="322000" />
       <workItem from="1757473172286" duration="345000" />
       <workItem from="1757516932709" duration="320000" />
-      <workItem from="1758197149405" duration="338000" />
+      <workItem from="1758197149405" duration="1071000" />
     </task>
     <servers />
   </component>
