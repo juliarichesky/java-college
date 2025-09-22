@@ -1,0 +1,104 @@
+conceitos básicos em java
+
+
+public => modificador de acesso que permite que variáveis, métodos ou classes sejam acessados de qualquer lugar, inclusive de outros arquivos e pacotes.
+
+private => modificador de acesso que limita a visibilidade de variáveis, métodos ou classes apenas dentro da própria classe onde estão declarados.
+
+static => significa que a variável ou método pertence à classe, e não a uma instância específica da classe. ou seja, eles podem ser acessados sem precisar criar um objeto da classe.
+
+void => tipo de retorno de um método que indica que ele não retorna nenhum valor.
+
+return => a palavra-chave usada para retornar um valor de um método. exemplo: se o método for do tipo int, você pode usar return para retornar um valor inteiro.
+
+final => imutável
+
+String => linha de texto
+
+
+exemplos de código
+exemplo 1: definindo a classe e criando um objeto
+
+public class Lista {
+    int num1 = 0;
+    int num2 = 0;
+
+    public int soma() {
+        return num1 + num2;
+    }
+}
+
+- aqui, você tem uma classe chamada Lista com duas variáveis de instância (num1 e num2). O método soma() retorna a soma dessas duas variáveis.
+
+-------x-------
+
+exemplo 2: arquivo Main.java (Usando a classe Lista)
+
+public class Main {
+    public static void main(String[] args) {
+        int A = 5;
+        int B = 10;
+        Lista listinha = new Lista();
+
+        listinha.num1 = A;
+        listinha.num2 = B;
+	listinha.soma();
+    }
+}
+
+aqui, criamos uma instância de Lista chamada listinha e atribuimos valores às variáveis num1 e num2. depois, chamamos o método soma() para calcular o resultado e imprimimos esse resultado na tela.
+
+-------x-------
+
+exemplo 3: método que faz a soma
+
+public class Lista {
+    int num1 = 0;
+    int num2 = 0;
+
+    public int soma() {
+        return num1 + num2;
+    }
+}
+
+
+o método soma() calcula a soma de num1 e num2 e retorna o resultado.
+
+-------x-------
+
+explicação dos conceitos
+
+classe (modelo): a classe é como um molde ou modelo de um objeto. ela define as características e comportamentos que os objetos daquela classe terão.
+exemplo: a classe Lista define os atributos num1 e num2 e o comportamento soma().
+
+objeto (instância): o objeto é uma instância de uma classe. ele é criado a partir da classe e possui valores específicos para suas variáveis de instância.
+exemplo: listinha é um objeto da classe Lista.
+
+instanciação: é o processo de criar um objeto a partir de uma classe. usamos a palavra-chave new para instanciar um objeto.
+exemplo: Lista listinha = new Lista();.
+
+. (ponto): em java, o ponto é usado para acessar membros (variáveis e métodos) de uma classe ou objeto.
+exemplo: listinha.num1 acessa o valor da variável num1 no objeto listinha.
+
+
+estilo de nomes em java
+
+camel case: usado para nomear variáveis e métodos. a primeira palavra começa com letra minúscula, e as palavras seguintes começam com letra maiúscula.
+exemplo: minhaVariavel, calcularSoma().
+
+pascal case: usado para nomear classes. A primeira letra de cada palavra é maiúscula.
+exemplo: MinhaClasse, ListaDeTarefas.
+
+
+importações
+
+import => serve para acessar classes e bibliotecas externas no seu projeto. você pode importar uma classe específica ou um pacote inteiro.
+
+import static => serve para importar métodos ou variáveis de uma classe estática, permitindo que você os use diretamente, sem precisar referenciar a classe.
+
+
+: (dois-pontos) => em java, o operador : é usado principalmente em loops for-each para iterar sobre coleções, como arrays ou listas, de forma simplificada. a sintaxe é for (tipo item : coleção), onde item recebe, a cada iteração, um elemento da coleção, sem precisar de um índice. Isso torna o código mais limpo e fácil de entender.
+
+for: o for é uma estrutura de repetição usada quando se sabe o número de iterações ou precisa-se iterar sobre um array ou lista. ele é estruturado com três partes: inicialização, condição e incremento. O loop executa enquanto a condição for verdadeira, permitindo realizar tarefas repetitivas de maneira controlada e eficiente.
+
+
