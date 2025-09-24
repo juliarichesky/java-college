@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ea7a015-2c44-4d37-aaad-05a0dd8aa567" name="Changes" comment="" />
+    <list default="true" id="5ea7a015-2c44-4d37-aaad-05a0dd8aa567" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +60,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Julia/Documents/MeusProjetos/java-college/1-semestre/aula-02/projeto-jogos/src/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -94,6 +97,10 @@
       <workItem from="1757473172286" duration="345000" />
       <workItem from="1757516932709" duration="320000" />
       <workItem from="1758197149405" duration="1071000" />
+      <workItem from="1758716106672" duration="65000" />
+      <workItem from="1758716190592" duration="610000" />
+      <workItem from="1758716863305" duration="142000" />
+      <workItem from="1758717017272" duration="11000" />
     </task>
     <servers />
   </component>
