@@ -1,0 +1,449 @@
+uma lista de tarefas é um ótimo projeto para praticar conceitos básicos de programação, como organizar dados e interagir com o usuário. para construir uma, vamos precisar pensar em três partes principais:
+
+
+a estrutura de dados => como vamos guardar as tarefas? que tipo de "caixa" em java é melhor para armazenar uma lista de itens?
+
+a interação com o usuário => como vamos permitir que a pessoa adicione novas tarefas, veja as existentes ou as marque como concluídas?
+isso geralmente envolve usar a entrada e saída do console.
+
+a lógica do programa => como fazemos para que o programa continue rodando, mostrando um menu de opções para o usuário até que ele decida sair?
+
+------------x------------
+
+para guardar a nossa lista de tarefas, que são textos (como "Comprar pão" ou "Estudar Java"), precisamos de uma estrutura que possa armazenar vários desses itens.
+em Java, a maneira mais flexível e moderna de fazer isso é usando uma ArrayList.
+
+para começar, usamos:
+
+public class Lista {
+    public static void main(String[] args) {
+	}
+}
+
+essa é nossa classe. agora, dentro da classe, precisamos criar a nossa lista para guardar as tarefas.
+
+public class Lista {
+    public static void main(String[] args) {
+	var tarefas = new ArrayList<String>();
+	}
+}
+
+agora que a lista tarefas existe, precisamos colocar a primeira tarefa nela.
+
+public class Lista {
+    public static void main(String[] args) {
+	var tarefas = new ArrayList<String>();
+	tarefas.add("Estudar Java");
+	}
+}
+
+agora que você já sabe como guardar e adicionar tarefas, o próximo passo é mostrá-las para o usuário.
+
+public class Lista {
+    public static void main(String[] args) {
+	var tarefas = new ArrayList<String>();
+	tarefas.add("Estudar Java");
+	System.out.println(tarefas);
+	}
+}
+
+dessa maneira, vai imprimir todas as tarefas. no entanto, para ter mais controle sobre como a lista aparece para o usuário, geralmente usamos um loop para imprimir cada tarefa uma por uma. o loop é : (dois-pontos).
+
+// o próprio IntelliJ vai criar isso
+import java.util.ArrayList;
+import java.util.List;
+
+public class Lista {
+    public static void main(String[] args) {
+
+        // criando a lista de tarefas
+	var tarefas = new ArrayList<String>();
+
+        // adicionando uma tarefa
+	tarefas.add("Estudar Java");
+	tarefas.add("Fazer prova");
+
+        // imprimindo a lista
+	System.out.println("Lista de tarefas");
+	for(String tarefa : tarefas) {
+		System.out.println("- " + tarefa);
+        }
+    }
+}
+
+como o usuário pode adicionar tarefas a essa lista enquanto o programa está rodando, em vez de nós mesmos adicionarmos no código? para fazer com que o usuário interaja com o programa, precisamos de uma ferramenta para ler o que ele digita no teclado. em java, a classe que faz isso é a Scanner.
+
+o processo é parecido com o que você fez para a ArrayList: você precisa criar um objeto Scanner. Esse objeto precisa saber de onde ele vai "escanear" a informação, que no nosso caso é do teclado, representado por System.in.
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner; // adicionamos scanner
+
+public class Lista {
+    public static void main(String[] args) {
+
+	var tarefas = new ArrayList<String>();
+
+	tarefas.add("Estudar Java");
+	tarefas.add("Fazer prova");
+
+	System.out.println("Lista de tarefas");
+	for(String tarefa : tarefas) {
+		System.out.println("- " + tarefa);
+
+	// 
+	Scanner leitor = new Scanner(System.in);
+        }
+    }
+}
+
+agora que temos o Scanner pronto para ler o teclado, o próximo passo é realmente pedir para o usuário digitar a tarefa e ler o que ele escreveu.
+o Scanner tem um método chamado nextLine() que faz isso. como você faria para ler a próxima linha que o usuário digitar e guardar essa linha em uma nova variável do tipo String, como por exemplo novaTarefa?
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner; // adicionamos scanner
+
+public class Lista {
+    public static void main(String[] args) {
+
+	var tarefas = new ArrayList<String>();
+
+	tarefas.add("Estudar Java");
+	tarefas.add("Fazer prova");
+
+	System.out.println("Lista de tarefas");
+	for(String tarefa : tarefas) {
+		System.out.println("- " + tarefa);
+
+	// 
+	Scanner leitor = new Scanner(System.in);
+
+	//
+	String novaTarefa = leitor.nextLine();
+        }
+    }
+}
+
+perfeito! agora que a tarefa digitada pelo usuário está guardada na variável novaTarefa, precisamos adicionar a variável novaTarefa para o usuário interagir.
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner; // adicionamos scanner
+
+
+public class Lista {
+    public static void main(String[] args) {
+
+	var tarefas = new ArrayList<String>();
+
+	tarefas.add("Estudar Java");
+	tarefas.add("Fazer prova");
+
+	System.out.println("Lista de tarefas");
+	for(String tarefa : tarefas) {
+		System.out.println("- " + tarefa);
+
+	// 
+	Scanner leitor = new Scanner(System.in);
+
+	//
+	String novaTarefa = leitor.nextLine();
+
+	//
+	tarefas.add(novaTarefa);
+        }
+    }
+}
+
+ótimo! você está no caminho certo. a sua lógica para usar o Scanner e adicionar a tarefa está correta. a única coisa a ajustar é a posição desse código. colocar o Scanner para ler a nova tarefa dentro do loop for faz com que o programa peça uma nova tarefa para cada tarefa que já existe na lista, o que não é o comportamento ideal.
+para que o programa continue rodando e você possa interagir com ele, precisamos colocar a lógica de leitura e adição dentro de um loop diferente. o mais comum para isso é o loop while.
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner; // adicionamos scanner
+
+
+public class Lista {
+    public static void main(String[] args) {
+
+	var tarefas = new ArrayList<String>();
+
+	tarefas.add("Estudar Java");
+	tarefas.add("Fazer prova");
+
+	System.out.println("Lista de tarefas");
+	for(String tarefa : tarefas) {
+		System.out.println("- " + tarefa);
+
+	Scanner leitor = new Scanner(System.in);
+
+	String novaTarefa = leitor.nextLine();
+
+	tarefas.add(novaTarefa);
+
+	while (true) { // o loop continuará rodando (por causa do true)
+    		System.out.println("\nMenu:");
+    		System.out.println("1. Adicionar tarefa");
+    		System.out.println("2. Ver tarefas");
+    		System.out.println("3. Sair");
+    		System.out.print("Escolha uma opção: ");
+    		// A lógica para ler a escolha do usuário entra aqui
+	     }
+        }
+    }
+}
+
+* já existe um loop :, por que adicionar outro?
+você está certo, já temos um loop for. a diferença é a finalidade de cada um.
+
+o loop for que você colocou é feito para percorrer todos os itens de uma lista já existente e fazer algo com cada um deles (no nosso caso, imprimir). ele sabe exatamente quando começar e quando terminar (no final da lista).
+
+o loop while que eu sugeri tem uma finalidade diferente: ele serve para que o programa continue rodando e não termine. ele vai ficar em um ciclo, mostrando o menu e esperando a sua escolha, e só vai parar quando você disser para ele parar.
+
+então, a lógica é a seguinte: o loop while é o "corpo" do seu programa, e dentro dele, você vai usar o loop for apenas quando for necessário, por exemplo, para mostrar a lista de tarefas.
+
+* a estrutura do seu código está um pouco invertida. isso acontece porque a gente estava construindo o programa em pedaços e agora estamos unindo tudo.
+
+vamos pensar na lógica de um programa com menu
+
+=> o programa começa.
+=> ele mostra o menu de opções (adicionar, ver, sair).
+=> ele espera sua escolha.
+=> você escolhe uma opção (por exemplo, "1").
+=> o programa executa a ação correspondente (adiciona uma tarefa).
+=> o programa volta ao passo 2 e mostra o menu novamente, esperando por outra escolha.
+
+seu código, como está agora, está fazendo a leitura da nova tarefa dentro do loop que mostra a lista. isso faria com que ele pedisse uma nova tarefa toda vez que ele fosse mostrar a lista, o que não é o que queremos.
+
+a estrutura correta seria:
+
+=> crie sua lista e seu Scanner antes do loop while.
+=> coloque o loop while para ser o "corpo" principal do seu programa.
+=> dentro do loop while, você vai:
+   => mostrar o menu.
+   => ler a opção do usuário.
+   => usar uma estrutura de controle (como if ou switch) para executar a ação certa (adicionar, ver, ou sair). ficaria assim:
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Lista {
+    public static void main(String[] args) {
+
+        // crie a lista e o Scanner AQUI, antes do loop principal.
+	var tarefas = new ArrayList<String>();
+
+        Scanner leitor = new Scanner(System.in);
+        
+        // o loop 'while' é o corpo principal do programa.
+        while (true) {
+            // Mostre o menu aqui.
+            System.out.println("\nMenu:");
+            System.out.println("1. Adicionar tarefa");
+            System.out.println("2. Ver tarefas");
+            System.out.println("3. Sair");
+            System.out.print("Escolha uma opção: ");
+            // A lógica para ler a escolha do usuário entra aqui.
+            // ...
+        }
+    }
+}
+
+o seu código agora tem a estrutura correta. criar a lista e o Scanner antes do loop é o jeito certo de fazer isso.
+agora, dentro do loop, precisamos ler a opção que o usuário digitou no menu. a gente precisa de um método do Scanner que leia um número inteiro (int).
+como você faria para ler o número da opção (1, 2 ou 3) e guardar esse valor em uma variável do tipo int?
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Lista {
+    public static void main(String[] args) {
+
+	var tarefas = new ArrayList<String>();
+
+        Scanner leitor = new Scanner(System.in);
+        
+        while (true) {
+            System.out.println("\nMenu:");
+            System.out.println("1. Adicionar tarefa");
+            System.out.println("2. Ver tarefas");
+            System.out.println("3. Sair");
+            System.out.print("Escolha uma opção: ");
+	
+	int opcao = leitor.nextInt();
+	
+	if (opcao == 1) {
+		// 1. Pedir ao usuário para digitar a nova tarefa
+		System.out.print("Digite a nova tarefa: ");
+
+    		// 2. Ler a tarefa completa que o usuário digitou
+		String novaTarefa = leitor.nextLine();
+
+    		// 3. Adicionar a tarefa à lista
+		tarefas.add(novaTarefa);
+		System.out.println("Tarefa adicionada!");
+		} else if (opcao == 2) {
+			System.out.print("Lista de tarefas: ");
+			for (String tarefa : tarefas) {
+				System.out.println("- " + tarefa);
+			}
+		}
+	     	
+        }
+    }
+}
+
+perfeito! agora só nos resta a opção 3. Sair.
+o nosso loop while está configurado para while (true), ou seja, ele rodaria para sempre. precisamos usar o comando break para interromper o loop:
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Lista {
+    public static void main(String[] args) {
+        // Crie a lista e o Scanner AQUI, antes do loop principal.
+        var tarefas = new ArrayList<String>();
+        Scanner leitor = new Scanner(System.in);
+        
+        // O loop 'while' é o corpo principal do programa.
+        while (true) {
+            // Mostre o menu.
+            System.out.println("\n--- Lista de Tarefas ---");
+            System.out.println("1. Adicionar tarefa");
+            System.out.println("2. Ver tarefas");
+            System.out.println("3. Sair");
+            System.out.print("Escolha uma opção: ");
+
+            int opcao = leitor.nextInt();
+            // Limpa o buffer do teclado.
+            leitor.nextLine(); 
+
+            if (opcao == 1) {
+                // Lógica para adicionar uma nova tarefa
+                System.out.print("Digite a nova tarefa: ");
+                String novaTarefa = leitor.nextLine();
+                tarefas.add(novaTarefa);
+                System.out.println("Tarefa adicionada!");
+            } else if (opcao == 2) {
+                // Lógica para ver as tarefas existentes
+                System.out.println("\nSuas Tarefas:");
+                if (tarefas.isEmpty()) {
+                    System.out.println("Nenhuma tarefa na lista.");
+                } else {
+                    for (String tarefa : tarefas) {
+                        System.out.println("- " + tarefa);
+                    }
+                }
+            } else if (opcao == 3) {
+                // Lógica para sair do programa
+                System.out.println("Saindo do programa. Até mais!");
+                leitor.close();
+                break; // Encerra o loop while
+            } else {
+                System.out.println("Opção inválida! Tente novamente.");
+            }
+        }
+    }
+}
+
+* \n significa que vai quebrar uma linha
+
+agora que a base do seu programa está sólida, o que você acha de aprendermos a remover uma tarefa da lista? isso envolveria um novo método do ArrayList.
+remover tarefas é a próxima funcionalidade lógica para a nossa lista.
+para fazer isso, a gente vai precisar de uma nova opção no nosso menu. O usuário vai ver a lista e escolher um número para a tarefa que ele quer remover.
+
+o ArrayList tem um método chamado remove() que faz exatamente isso. ele remove um item da lista quando você diz qual é o índice do item.
+a única coisa a lembrar é que, em Java, as listas começam a contar do índice 0, e não do 1.
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Lista {
+    public static void main(String[] args) {
+        // Crie a lista e o Scanner AQUI, antes do loop principal.
+        var tarefas = new ArrayList<String>();
+        Scanner leitor = new Scanner(System.in);
+        
+        // O loop 'while' é o corpo principal do programa.
+        while (true) {
+            // Mostre o menu.
+            System.out.println("\n--- Lista de Tarefas ---");
+            System.out.println("1. Adicionar tarefa");
+            System.out.println("2. Ver tarefas");
+            System.out.println("3. Sair");
+            System.out.print("Escolha uma opção: ");
+
+            int opcao = leitor.nextInt();
+            // Limpa o buffer do teclado.
+            leitor.nextLine(); 
+
+            // --- ETAPA 3: A LÓGICA DO PROGRAMA (Decisões) ---
+            if (opcao == 1) {
+                System.out.print("Digite a nova tarefa: ");
+                String novaTarefa = leitor.nextLine();
+                tarefas.add(novaTarefa);
+                System.out.println("Tarefa adicionada!");
+            } else if (opcao == 2) {
+                System.out.println("\nSuas Tarefas:");
+                if (tarefas.isEmpty()) {
+                    System.out.println("Nenhuma tarefa na lista.");
+                } else {
+                    int contador = 1;
+                    for (String tarefa : tarefas) {
+                        System.out.println(contador + ". " + tarefa);
+                        contador++;
+                    }
+                }
+            } else if (opcao == 3) {
+                System.out.println("Saindo do programa. Até mais!");
+                leitor.close();
+                break;
+            } else if (opcao == 4) {
+                if (tarefas.isEmpty()) {
+                    System.out.println("Nenhuma tarefa para remover.");
+                } else {
+                    System.out.println("\nSuas Tarefas:");
+                    int contador = 1;
+                    for (String tarefa : tarefas) {
+                        System.out.println(contador + ". " + tarefa);
+                        contador++;
+                    }
+                    System.out.print("Digite o NOME da tarefa para remover: ");
+                    String tarefaParaRemover = leitor.nextLine();
+
+                    if (tarefas.remove(tarefaParaRemover)) {
+                        System.out.println("Tarefa removida com sucesso!");
+                    } else {
+                        System.out.println("Tarefa não encontrada!");
+                    }
+                }
+            } else {
+                System.out.println("Opção inválida! Tente novamente.");
+            }
+        }
+    }
+}
+
+------------------x------------------
+
+resumo do que você aprendeu
+ArrayList: A "caixa" para guardar sua lista de tarefas.
+
+Scanner: A ferramenta para ler o que o usuário digita no teclado.
+
+while (true): O loop que faz seu programa rodar sem parar.
+
+if e else if: Estruturas para tomar decisões.
+
+for: O loop para exibir todas as tarefas da lista.
+
+.add(): O método para adicionar uma tarefa à lista.
+
+.remove(): O método para remover uma tarefa da lista.
+
+esses são os conceitos essenciais que você precisa para começar a programar. conforme você avança, vai aprender outros métodos que facilitam ainda mais, mas o que você sabe agora já é o suficiente para criar muitos programas.

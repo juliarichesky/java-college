@@ -10,11 +10,7 @@ public class Avaliacao {
 
     @Override
     public String toString() {
-        return "Avaliacao{" +
-                "nomeUsuario='" + nomeUsuario + '\'' +
-                ", nota=" + nota +
-                ", comentario='" + comentario + '\'' +
-                ", dataLancamento=" + dataLancamento +
+        return "Avaliacao{" + "nomeUsuario='" + nomeUsuario + '\'' + ", nota=" + nota + ", comentario='" + comentario + '\'' +  ", dataLancamento=" + dataLancamento +
                 '}';
     }
 }
