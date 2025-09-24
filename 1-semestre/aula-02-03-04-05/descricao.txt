@@ -1,3 +1,0 @@
-nessas aulas, estamos criando um projeto de gerenciamento de jogos como introdução ao java, funcionalidades básicas, código mais limpo. através do GitHub do professor leo, onde está tudo bem mais explicado, é mais tranquilo de entender. 
-
-https://github.com/lleonardogr
